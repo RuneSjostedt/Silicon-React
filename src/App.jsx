@@ -6,6 +6,10 @@ import Hero from './components/Hero'
 import Brands from './components/Brands'
 import Appfeatures from './components/Appfeatures'
 import Howdoesitwork from './components/Howdoesitwork'
+import Makeyourmoney from './components/Makeyourmoney'
+import Clientreviews from './components/Clientreviews'
+import Faq from './components/Faq'
+import Subscribe from './components/Subscribe'
 
 function App() {
   
@@ -18,6 +22,10 @@ function App() {
     <Brands/>
     <Appfeatures/>
     <Howdoesitwork/>
+    <Makeyourmoney/>
+    <Clientreviews/>
+    <Faq/>
+    <Subscribe/>
     </main>
     <Footer/>
     </>
