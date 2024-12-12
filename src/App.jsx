@@ -1,34 +1,33 @@
+// import React from 'react'
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import './css/contact-page.css'
 import './css/styles.css'
+import Home from './views/Home'
+import Contacts from './views/Contacts'
+import Features from './views/Features'
+import Projects from './views/Projects'
+
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
-import Hero from './components/Hero'
-import Brands from './components/Brands'
-import Appfeatures from './components/Appfeatures'
-import Howdoesitwork from './components/Howdoesitwork'
-import Makeyourmoney from './components/Makeyourmoney'
-import Clientreviews from './components/Clientreviews'
-import Faq from './components/Faq'
-import Subscribe from './components/Subscribe'
+
 
 function App() {
   
 
   return (
-    <>
-    <Navbar/>
-    <main>
-    <Hero/>
-    <Brands/>
-    <Appfeatures/>
-    <Howdoesitwork/>
-    <Makeyourmoney/>
-    <Clientreviews/>
-    <Faq/>
-    <Subscribe/>
-    </main>
-    <Footer/>
-    </>
+    <BrowserRouter>
+      <Navbar />
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/features" element={<Features />} />
+          <Route path="/projects" element={<Projects />} />
+        </Routes>
+      </main>
+
+      <Footer />
+    </BrowserRouter>
   )
 }
 

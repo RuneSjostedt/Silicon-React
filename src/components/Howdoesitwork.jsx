@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import Iphone1 from '../assets/images/iPhone 12-1.svg'
 import Iphone2 from '../assets/images/iPhone 12-2.svg'
 import Iphone3 from '../assets/images/iPhone 12-how-3.svg'

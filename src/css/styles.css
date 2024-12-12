@@ -63,9 +63,7 @@ header{
     background-color:#0B0F19;
  }
 
- .review-card {
-    
- }
+
 }
 
 * {
@@ -131,6 +129,17 @@ body {  font-family: "Manrope", sans-serif;
     .nav-link:hover {
         color: var(--color-primary);
         text-decoration: underline;
+    }
+
+    .nav-contact-link {
+        text-decoration: none;
+        color: var(--color-black);
+        font-weight: 600;
+    }
+
+    #main-menu {
+        display: flex;
+        gap: 24px;
     }
 
     .active {

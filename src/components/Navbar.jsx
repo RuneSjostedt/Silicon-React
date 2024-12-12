@@ -1,4 +1,5 @@
-import React from 'react'
+// import React from 'react'
+import { Link, NavLink } from 'react-router-dom'
 import Logo from '../assets/images/logo.svg'
 
 const Navbar = () => {
@@ -11,15 +12,16 @@ const Navbar = () => {
         <div className="navbar">
             <div className="container">
 
-                <a id="logo" href="index.html"><img src={Logo} alt="Silicon logo" /></a>
+                <Link id="logo" to="/"><img src={Logo} alt="Silicon logo" /></Link>
 
                 <nav id="main-menu" className="">
-                    <a className="nav-link" href="#">Features</a>
+                    <NavLink className="nav-link" href="#">Features</NavLink>
+                    <NavLink className="nav-contact-link" to="/Contacts">Contacts </NavLink>
                 </nav>
 
                 <div id="darkmode-toggle-switch" className="btn-toggle-switch">
                     <span className="label">Dark mode</span>
-                    <label for="darkmode-switch" className="toggle-switch">
+                    <label htmlFor="darkmode-switch" className="toggle-switch">
                         <input id="darkmode-switch" type="checkbox" />
                         <span className="slider round"></span>
                     </label>

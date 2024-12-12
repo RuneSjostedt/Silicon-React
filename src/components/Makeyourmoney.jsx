@@ -1,4 +1,4 @@
-import React from 'react'
+// import React from 'react'
 import CheckCircle from '../assets/images/check-circle.svg'
 import MoneyGraph from '../assets/images/money-graph.svg'
 import ContactCards from '../assets/images/contacts-cards-img.svg'
