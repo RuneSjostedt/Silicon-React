@@ -4,6 +4,7 @@ import ArrowImg from '../assets/images/arrow-img.svg'
 import BxEnvelope from '../assets/images/bx-envelope.svg'
 import AddGrp from '../assets/images/add-group-img.svg'
 import { NavLink } from 'react-router-dom'
+import ConsultationForm from './ConsultationForm'
 
 
 const Herocontact = () => {
@@ -49,24 +50,9 @@ const Herocontact = () => {
 </div>
     <div className="consultation-card">
         <h2>Get Online Consultation</h2>
-        <div className="consult-forms">
-            <form className="consult-form" action="">
-                <label className="label-consult" htmlFor="">Full Name</label>
-                <input className="input-consult" type="text"/>
-            </form>
-            <form className="consult-form" action="">
-                <label className="label-consult" htmlFor="">Email address</label>
-                <input className="input-consult" type="text"/>
-            </form>
-            <form className="consult-form" action="">
-                <label className="label-consult" htmlFor="">Specialist</label>
-                <input className="input-consult" type="text"/>
-            </form>
-        </div>
-       
-        <div className="btn-primary">
-            <p>Make an appointment</p>
-        </div>
+
+        <ConsultationForm/>
+
     </div>
 </div>
 

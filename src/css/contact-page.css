@@ -444,6 +444,9 @@ body {  font-family: "Manrope", sans-serif;
                 align-items: flex-start;
                 gap: 4px;
                 
+                span {
+                    color: red;
+                }
             }
 
             .label-consult {
