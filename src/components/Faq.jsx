@@ -1,7 +1,21 @@
-import React from 'react'
+// import React from 'react'
+import { useEffect, useState } from 'react'
 import FaqIcon from '../assets/images/faq-icon-msg.svg'
+import AccordionItem from './AccordionItem'
 
 const Faq = () => {
+    const [accordions, setAccordions] = useState([])
+
+   const fetchFaq = async () => {
+        const res = await fetch('https://win24-assignment.azurewebsites.net/api/faq')
+        const data = await res.json()
+        setAccordions(data)
+   }
+
+    useEffect(() =>{
+        fetchFaq()
+    }, [])
+
   return (
     <section id="faq">
     <div className="container">
@@ -31,61 +45,14 @@ const Faq = () => {
         </div>
         <div className="faq-section-2">
             <div className="faq-cards">
-                <div className="faq-card">
-                    <button className="accordion">
-                        <h4>Is any of my personal information stored in the App?</h4>
-                        <div id="accordion-btn" className="btn-circle"><i className="fa-regular fa-angle-down fa-sm"></i></div>
-                    </button>
-                    <div className="panel">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    </div>
-                </div>
-                <div className="faq-card">
-                    <button className="accordion">
-                        <h4>What formats can I download my transaction history in?</h4>
-                        <div id="accordion-btn-1" className="btn-circle"><i className="fa-regular fa-angle-down fa-sm"></i></div>
-                    </button>
-                    <div className="panel">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    </div>
-                </div>
-                <div className="faq-card">
-                    <button className="accordion">
-                        <h4>Can I schedule future transfers?</h4>
-                        <div id="accordion-btn" className="btn-circle"><i className="fa-regular fa-angle-down fa-sm"></i></div>
-                    </button>
-                    <div className="panel">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    </div>
-                </div>
-                    <div className="faq-card">
-                    <button className="accordion">
-                        <h4>When can I use Banking App services?</h4>
-                        <div id="accordion-btn" className="btn-circle"><i className="fa-regular fa-angle-down fa-sm"></i></div>
-                    </button>
-                    <div className="panel">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    </div>
-                </div>
-                <div className="faq-card">
-                    <button className="accordion">
-                        <h4>Can I create my own password that is easy for me to remember?</h4>
-                        <div id="accordion-btn" className="btn-circle"><i className="fa-regular fa-angle-down fa-sm"></i></div>
-                    </button>
-                    <div className="panel">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    </div>
-                </div>
-                <div className="faq-card">
-                    <button className="accordion">
-                        <h4>What happens if I forget or lose my password?</h4>
-                        <div id="accordion-btn" className="btn-circle"><i className="fa-regular fa-angle-down fa-sm"></i></div>
-                    </button>
-                    <div className="panel">
-                        <p>Nunc duis id aenean gravida tincidunt eu, tempor ullamcorper. Viverra aliquam arcu, viverra et, cursus. Aliquet pretium cursus adipiscing gravida et consequat lobortis arcu velit. Nibh pharetra fermentum duis accumsan lectus non. Massa cursus molestie lorem scelerisque pellentesque. Nisi, enim, arcu purus gravida adipiscing euismod montes, duis egestas. Vehicula eu etiam quam tristique tincidunt suspendisse ut consequat.</p>
-                    </div>
-                </div>
 
+            {
+                accordions.map(item => (
+                    <AccordionItem key={item.id} item={item}/>
+                ))
+            }
+
+          
 
             </div>
         </div>

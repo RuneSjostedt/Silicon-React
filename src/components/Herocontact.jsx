@@ -3,6 +3,8 @@ import HomePage from '../assets/images/homepage-img.svg'
 import ArrowImg from '../assets/images/arrow-img.svg'
 import BxEnvelope from '../assets/images/bx-envelope.svg'
 import AddGrp from '../assets/images/add-group-img.svg'
+import { NavLink } from 'react-router-dom'
+
 
 const Herocontact = () => {
   return (
@@ -10,10 +12,10 @@ const Herocontact = () => {
     <div className="container">
        
         <div className="page-selector">
-            <a className="home-img" href=""><img src={HomePage} alt=""/></a>
-            <a href="">Homepage</a>
+            <NavLink className="home-img" to="/"><img src={HomePage} alt=""/></NavLink>
+            <NavLink to="/">Homepage</NavLink>
             <a className="arrow-btn" href=""><img src={ArrowImg} alt=""/></a>
-            <a href="">Contact</a>
+            <a href="#">Contact</a>
         </div>
         <div className="contact-flex1">
         <div className="contact-flex2">

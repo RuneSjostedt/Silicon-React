@@ -535,9 +535,6 @@ body {  font-family: "Manrope", sans-serif;
          #how-does-it-work {
             background-color: var(--color-Gray-100);
             
-            .container {
-
-            }
 
             .subheadline-how {
                
@@ -761,10 +758,6 @@ body {  font-family: "Manrope", sans-serif;
                     
                     gap: 24px;
                     
-                    .ratings-img {
-                       width: 88px;
-                    }
-
                     .review-p-content {
                         color: var(--color-gray-700);
                         font-size: 18px;
@@ -933,16 +926,17 @@ body {  font-family: "Manrope", sans-serif;
                        .panel {
                         padding-left: 24px;
                         padding-right: 24px;
-                        max-height: 0;
+                        text-decoration: none;
                         overflow: hidden;
                         transition: max-height 0.2s ease-out;
-                        
+
 
                         p {
                             padding-bottom: 24px;
                             font-size: 14px;
                             font-weight: 400;
                             color: var(--color-gray-700);
+
                         }
                        }
                     }
